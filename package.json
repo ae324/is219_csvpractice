@@ -1,7 +1,7 @@
 {
   "name": "is219_csvpractice",
   "version": "1.0.0",
-  "description": "",
+  "description": "My First CSV App",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -14,12 +14,7 @@
   "email": "ae324@njit.edu",
   "license": "ISC",
   "dependencies": {
-    "coveralls": "^3.0.9",
-    "csv": "^5.3.1",
-    "csv-generate": "^3.2.4",
-    "csv-parse": "^4.8.7",
-    "csv-reader": "^1.0.6",
-    "jest": "^25.1.0"
+    "csv-parse": "^4.8.7"
   },
   "devDependencies": {
     "coveralls": "^3.0.9",
