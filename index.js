@@ -1,22 +1,29 @@
-const parse = require('csv-parse')
+const parse = require('csv-parse');
 const fs = require('fs');
-const output = []
-let csvFile = 'Data/WorldCitiesShortList.csv';
+const City = require('./models/crimes');
+const output = [];
+let csvFile = './data/SacramentocrimeJanuary2006.csv';
+
+
 fs.createReadStream(csvFile)
     .pipe(parse({
-    delimiter: ',',
-    trim: true,
-    skip_empty_lines: true
-})
-    .on('readable', function(){
-        let record
-        while (record = this.read()) {
-            output.push(record)
-        }
+        columns: true,
+        delimiter: ',',
+        trim: true,
+        skip_empty_lines: true
     })
-    // When we are done, test that the parsed output matched what expected
-    .on('end', function(){
+        .on('readable', function(){
+            let record
+            while (record = this.read()) {
+                console.log(record)
+                let city = new City(record);
+                output.push(record)
+            }
+        })
+        // When we are done, test that the parsed output matched what expected
+        .on('end', function(){
 
-        console.log(output);
+            //  console.log(output);
 
-    }));
+        }));
+

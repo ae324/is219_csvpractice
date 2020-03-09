@@ -15,13 +15,14 @@
   "license": "ISC",
   "dependencies": {
     "coveralls": "^3.0.9",
+    "csv": "^5.3.1",
+    "csv-generate": "^3.2.4",
     "csv-parse": "^4.8.7",
+    "csv-reader": "^1.0.6",
     "jest": "^25.1.0"
   },
   "devDependencies": {
     "coveralls": "^3.0.9",
     "jest": "^25.1.0"
   }
-
 }
-
